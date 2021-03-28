@@ -13,7 +13,7 @@ def readFiles():
 
 
 def createResult(dictValues):
-    with open("result.txt", "w") as file:
+    with open(os.path.join(os.getcwd(),"result.txt"),"w") as file:
         new_dict=OrderedDict(sorted(dictValues.items(), key=lambda t: t[0]))
         for key,values in new_dict.items():
             file.write(values[-1]+"\n")
